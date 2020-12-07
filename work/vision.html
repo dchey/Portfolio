@@ -1,0 +1,156 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Portfolio</title>
+    <!-- meta tage -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    
+    <!-- bootstrap + css file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/67f90579cc.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="../index.html">Name</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../resume.pdf" target="_blank">Resume</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 sidebar" id="side">
+          <div class="panel panel-info">
+            </br>
+            <div class="space-bottom"><a href="../index.html" class="anchor" style="color: grey;">← Back</a></div>
+            </br>
+            <ul class="list-group">
+              <li class="list-group-item"><a href="#overview" style="color: grey;">Overview</a></li>
+              <li class="list-group-item"><a href="#method" style="color: grey;">Method</a></li>
+              <li class="list-group-item"><a href="#results" style="color: grey;">Results</a></li>
+              <li class="list-group-item"><a href="#conclusion" style="color: grey;">Conclusion</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-9 main-content">
+          <div class=project-title><b>Tortellini</b></div>
+          <div class=project-subtitle>Crowd Counting Model with CNN</div>
+          <div>
+            <img class="project-image-vision" src="../img/vision3.png">
+          </div>
+          <a name="overview"><div class=project-sections>Overview</div></a>
+          <p class=project-text>
+            Having to wait in a long queue for a meal at school dining halls or your long-awaited package in the mail room is never fun. 
+            What if there is a way to remotely see the current status of the line to help you decide when to line up?
+            With two other students, I implemented a crowd-counting model with Convolutional Neural Network (CNN) that can help prevent the surprise and shock of seeing an endless lines at schools for students.
+            </br></br>
+            In universities, students face congestion of people daily at dining halls and mail rooms.
+            If they can know how many people are in line without actually having to go to that place, they can avoid such congestion or at least approximate the waiting time to plan their next schedules.
+            In order to implement our crowd-counting model for students at school, we tried different combinations of CNN layers.
+            For the train and test data, we had planned to use photos of students in line at school.
+            However, due to COVID-19, we decided to use online resources.
+          </p>
+          <a name="method"><div class=project-sections>Method</div></a>
+          <div class=project-subtitle>Preprocessing</div>
+          </br>
+          <div>
+            <img class="project-image-vision" src="../img/model.png">
+          </div>
+          <p class=project-text>
+            We put labels on the train image where the people are and then converted the labeled image to a density map using the Gaussian filter.
+            Then we summed the values in the density map to approximate the number of people in the original image.
+          </p>
+          <div class=project-subtitle>CNN Model</div>
+          </br>
+          <p class=project-text>
+            CNN layers are based on CSRNet and CrowdNet models.
+            The model has 4 sets of 1-3 conv2d layers and 1 max pooling layer.
+          </p>
+          <div class=project-subtitle>Prediction</div>
+          </br>
+          <div>
+            <img class="project-image-vision" src="../img/vision2.png">
+          </div>
+          <p class=project-text>
+            We predicted the number of people in our test images using our trained model and CSRNet.
+            In order to help the model distinguish people from their surroundings like clothes, walls, and floors, we darkened the image before inputting to the model.
+            The constants for pixel alteration were determined by trial and error to increase the accuracy.
+            Decreasing the intensity too much caused the faces to blend in with the surroundings and decreased the performance.
+            </br></br>
+            To analyze the performance, we used Mean Absolute Error (MAE) as our measurement.
+            MAE of an image is the absolute difference between the true count of people in the image and the predicted count.
+            By finding the average MAE value of test image set, we approximated how many people were miscounted in each of our test image.
+            Lower MAE means better performance.
+          </p>
+          <a name="results"><div class=project-sections>Results</div></a>
+          <div>
+            <img class="project-image-normalization" src="../img/normalization.png">
+          </div>
+          <p class=project-text>
+            The above shows the MAE results of the different methods.
+            Model A is our model and Model B is the CSRNet referenced model.
+            The results show that higher training time and image normalization significantly reduce MAE.
+          </p>
+          <a name="conclusion"><div class=project-sections>Conclusion</div></a>
+          <p class=project-text>
+            Due to the lack of computing power, the accuracy of our model was not as high as we hoped to achieve.
+            However, we learned how each component of crowd counting works together in Computer Vision.
+            We learned how preprocessing, training, and predicting worked and their significance affecting the other parts of the program.
+            Crowd counting shows the power of Computer Vision and how it is highly applicable in our everyday lives.
+            </br></br>
+            If school opens next semester, we wish to put video cameras at dining halls or mail room, so we can use the photo data to inform students how many people are in line and the approximate waiting time before they actually go to such places.
+            However, we know that privacy matters. 
+            Some students may not like their photos being taken.
+            So we would  blur the image so that the students are not recognizable or keep the photos in safe places.
+            With more data and training, we hope that one day we would not need to ask how long the pasta line is.
+          </p>
+          <a class="nav-link" href="../CS1430_Final_Project_Report.pdf" target="_blank">Click here to view full report</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="jumbotron mt-5 mb-0" style="background-color: lightyellow;">
+      <div class="row">
+        <div class="col-sm-8">
+          <h5>
+            © Coded by Name 2020
+          </h5>
+        </div>
+        <div class="col-sm-4">
+          <div style="text-align: right;">
+            <!--Github-->
+            <a type="button" class="btn btn-git" href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+            <!--Linkedin-->
+            <a type="button" class="btn btn-li" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <!--Email-->
+            <a type="button" class="btn btn-email" href="mailto: name@brown.edu" target="_blank"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <!-- Javascript files -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</html>

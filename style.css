@@ -1,0 +1,133 @@
+body {
+    background-color: lightyellow;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border: solid black 2px;
+}
+
+.introduction {
+    background-color: lightyellow;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.list-group-item {
+    color: black;
+}
+
+.container {
+    text-align: center;
+}
+
+.card {
+    margin: 1vw;
+    padding: 1vw;
+    background-color: lightyellow;
+    border: none;
+}
+
+.title-project-text {
+    text-align: center;
+    font-size: 20px;
+    padding: 1vw;
+}
+
+.main-title {
+    font-size: 6vw;
+    padding-left: 1vw;
+}
+
+.main-text {
+    font-size: 20px;
+    padding-left: 1vw;
+}
+
+
+/* projects */
+.sidebar {
+    position: fixed;
+}
+
+.main-content {
+    margin-left: 20vw;
+}
+
+.list-group-item {
+    border: none;
+    background-color: lightyellow;
+}
+
+.project-title {
+    font-size: 6vw;
+}
+
+.project-subtitle {
+    font-size: 3vw;
+}
+
+.project-sections {
+    font-size: 4vw;
+}
+
+.project-subtitle {
+    font-size: 2.5vw;
+}
+
+.project-text {
+    padding-bottom: 1vw;
+    text-align: left;
+    font-size: 20px;
+}
+
+.proj-img {
+    width: 45%;
+    height: 45%;
+}
+
+.proj-img2 {
+    width: 22.7%;
+    height: 22.7%;
+}
+
+.proj-img3 {
+    width: 46%;
+    height: 46%;
+}
+
+.iterative-interface-img {
+    width: 30%;
+    height: 30%;
+}
+
+.iterative-user-img {
+    width: 45%;
+    height: 45%;
+}
+
+.project-image-normalization {
+    height: 5%;
+    width: 40%;
+}
+
+.project-image-vision {
+    height: 14%;
+}
+
+.project-ab-test-website {
+    height: 12%;
+}
+.project-ab-test-main {
+    height: 19%;
+}
+
+@media (max-width: 768px) {
+    #side { 
+        display: none; 
+    } 
+}

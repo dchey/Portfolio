@@ -1,0 +1,137 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Portfolio</title>
+    <!-- meta tage -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    
+    <!-- bootstrap + css file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/67f90579cc.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="../index.html">Name</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../resume.pdf" target="_blank">Resume</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 sidebar" id="side">
+          <div class="panel panel-info">
+            </br>
+            <div class="space-bottom"><a href="../index.html" class="anchor" style="color: grey;">← Back</a></div>
+            </br>
+            <ul class="list-group">
+              <li class="list-group-item"><a href="#overview" style="color: grey;">Overview</a></li>
+              <li class="list-group-item"><a href="#sketches" style="color: grey;">Initial Sketches</a></li>
+              <li class="list-group-item"><a href="#mockup" style="color: grey;">New Interface</a></li>
+              <li class="list-group-item"><a href="#user-test" style="color: grey;">User Testing</a></li>
+              <li class="list-group-item"><a href="#analysis" style="color: grey;">User Analysis</a></li>
+              <li class="list-group-item"><a href="#change" style="color: grey;">Potential Changes</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-9 main-content">
+          <div class=project-title><b>Statique</b></div>
+          <div class=project-subtitle>Creating App Design for a Startup</div>
+          </br>
+          <a name="overview"><div class=project-sections>Overview</div></a>
+          <p class=project-text>
+            This project is about iteratively designing an interface for a startup with feedbacks from class and user testing.
+            Me and three other students chose a startup called Statique, a company that allows individuals and buildings to provide EV (electric vehicle) charging points through its app to to mitigate air pollution from automobile exhaust by encouraging the use of EVs.
+          </p>
+          <a name="sketches"><div class=project-sections>Initial Sketches</div></a>
+          <p class=project-text>
+            First, we brainstormed different sketches for the startup and combined them to create a low fidelity prototype:
+            </br>
+            <img class="proj-img" src="../img/Wireframe1.png">
+            <img class="proj-img3" src="../img/Wireframe2.png">
+            <img class="proj-img" src="../img/Wireframe3.png">
+            <img class="proj-img2" src="../img/Wireframe4.png">
+          </p>
+          <a name="mockup"><div class=project-sections>New Interface</div></a>
+          <p class=project-text>
+            Then we combined the sketches and create a interactive high fidelity mockup of the design and made revisions with feedbacks from classmates:
+            <div>
+              <img class="iterative-interface-img" src="../img/hi-fi.png">
+            </div>
+            <a href="https://www.figma.com/proto/VN8DjG48uh8Zpid1AMPJPp/Statiq-Hi-fi?node-id=4%3A4&scaling=scale-down", target="_blank">Click here</a> to view interactive high fidelity mockup.
+          </p>
+          <a name="user-test"><div class=project-sections>User Testing</div></a>
+          <p class=project-text>
+            Finally, we had random users to use the mockup and tell us about the experience:
+            <div class=project-text>
+              <img class="iterative-user-img" src="../img/user-test1.png">
+              <img class="iterative-user-img" src="../img/user-test2.png">
+              </br></br>
+              The main task we gave was for the users to complete a reservation procedure, which is the main functionality of our app.
+              </br></br>
+              We broke down our main task into sub-tasks, which are actions that users should take on each screen in order to successfully make a reservation.
+            </div>
+          </p>
+          <a name="analysis"><div class=project-sections>User Analysis</div></a>
+          <p class=project-text>
+            We observed that users typically made little to no errors and have no trouble navigating through the process on their first try. Some of them are confused as to why a payment component of app is needed, but that is due to the fact that the business model of Statiq was not fully communicated to users as background knowledge before they started the test.
+            </br></br>
+            The fact that most users were able to successfully complete the task on the first try, some even without needing to consult the sub-tasks, shows that the interface is intuitive enough and has good affordances that allows users to know how to go from one step to the next.
+            </br></br>
+            Some problems, such as more clarity regarding what the navigation function would look like, was also brought up during user testing.
+          </p>
+          <a name="change"><div class=project-sections>Potential Changes</div></a>
+          <p class=project-text>
+            Besides changing the navigation text instructions from "Swipe Up to Naviage" to "Swipe Up to Enter Navigation Mode" to make it clear that navigation is a separate functionality that is different than the maps homepage, we could also consider adding an additional screen in our hi-fi mockup to showcase what the specific page would look like to users.
+            </br></br>
+            We have also included the names of different functions under the icons in the bottom navigation bar, so the purpose of each icon and where it might take the user would be clear even to people who are using the application for the first time.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="jumbotron mt-5 mb-0" style="background-color: lightyellow;">
+      <div class="row">
+        <div class="col-sm-8">
+          <h5>
+            © Coded by Name 2020
+          </h5>
+        </div>
+        <div class="col-sm-4">
+          <div style="text-align: right;">
+            <!--Github-->
+            <a type="button" class="btn btn-git" href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+            <!--Linkedin-->
+            <a type="button" class="btn btn-li" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <!--Email-->
+            <a type="button" class="btn btn-email" href="mailto: name@brown.edu" target="_blank"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <!-- Javascript files -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</html>

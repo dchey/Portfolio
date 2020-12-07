@@ -1,0 +1,118 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Portfolio</title>
+    <!-- meta tage -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    
+    <!-- bootstrap + css file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/67f90579cc.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="../index.html">Name</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../resume.pdf" target="_blank">Resume</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 sidebar" id="side">
+          <div class="panel panel-info">
+            </br>
+            <div class="space-bottom"><a href="../index.html" class="anchor" style="color: grey;">← Back</a></div>
+            </br>
+            <ul class="list-group">
+              <li class="list-group-item"><a href="#overview" style="color: grey;">Overview</a></li>
+              <li class="list-group-item"><a href="#goal" style="color: grey;">Goals and Values</a></li>
+              <li class="list-group-item"><a href="#design" style="color: grey;">Design and Implementation Details</a></li>
+              <li class="list-group-item"><a href="#conclusion" style="color: grey;">Conclusion</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-9 main-content">
+          <div class=project-title><b>Kdrama Filter</b></div>
+          <div class=project-subtitle>React App Design and Implementation</div>
+          </br>
+          <a name="overview"><div class=project-sections>Overview</div></a>
+          <div>
+            <img src="../img/development2.png">
+          </div>
+          <p class=project-text>
+            In this project, I created a simple React.js app with filtering and sorting functionality with an aggregator. 
+            This means that the app has a list of items that the user can sort and/or filter.
+            It also lets users to aggregate the items for some purpose. 
+            In this app, I created a list of kdramas and let users to find and shop their favorite dramas. 
+          </p>
+          <a name="goal"><div class=project-sections>Goals and Values</div></a>
+          <p class=project-text>
+            The goal of this app is to create a React.js app with sorting, filtering, and aggregator functionalities with states and components.
+            </br> </br>
+            The value of this app is to allow users to find and shop their favorite kdramas with filtering and sorting functionalities.
+          </p>
+          <a name="design"><div class=project-sections>Design and Implementation Details</div></a>
+          <p class=project-text>
+            Some usability and design principles that I considered are simplicity and consistency. 
+            For simplicity, I used navigation bar on the top to let users find sorting and filtering functionalities quickly. 
+            For consistency, I used same design for all the items in both carts and filtered/sorted list, and 
+            used the same colors and hovering functionalities for all the filtering/sorting buttons in the navigation bar.
+            </br> </br>
+            The app lets users to filter by tv channels and genre, and sort by ratings. The aggregating property is a cart that totals the price of dramas.
+          </p>
+          <a name="conclusion"><div class=project-sections>Conclusion</div></a>
+          <p class=project-text>
+            This was my first time using Javascript and React, so even though there was a lot to cover, the assignment was overall
+            interesting and learned a lot, especially with adding functionalities in websites and how to structure a React program.
+          </p>
+          <a class="app-link" href="https://desolate-savannah-11525.herokuapp.com" target="_blank"> Click here to view app.</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="jumbotron mt-5 mb-0" style="background-color: lightyellow;">
+      <div class="row">
+        <div class="col-sm-8">
+          <h5>
+            © Coded by Name 2020
+          </h5>
+        </div>
+        <div class="col-sm-4">
+          <div style="text-align: right;">
+            <!--Github-->
+            <a type="button" class="btn btn-git" href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+            <!--Linkedin-->
+            <a type="button" class="btn btn-li" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <!--Email-->
+            <a type="button" class="btn btn-email" href="mailto: name@brown.edu" target="_blank"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <!-- Javascript files -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</html>
